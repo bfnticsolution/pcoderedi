@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement de l'application</title>
+    <meta http-equiv="refresh" content="3;url=https://play.google.com/store/apps/details?id=p.code">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #007bff;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #1077d7;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+        .circle-img {
+    width: 100px; /* Ajuste la taille selon tes besoins */
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px; /* Centre l'image et ajoute un espacement */
+    object-fit: cover;
+}
+
+    </style>
+   <script>
+    function openApp() {
+        var appScheme = "intent://p.code#Intent;scheme=market;package=p.code;end;";
+        var playStoreUrl = "https://play.google.com/store/apps/details?id=p.code";
+
+        // Essayez d'ouvrir l'application en priorité
+        window.location.href = appScheme;
+
+        // Si l'application ne s'ouvre pas, redirige vers le Play Store après un court délai
+        setTimeout(function() {
+            window.location.href = playStoreUrl;
+        }, 1000);
+    }
+
+    // Lance la fonction après 1 seconde
+    setTimeout(openApp, 1000);
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Redirection en cours...</h1>
+        <img src="https://www2.0zz0.com/2025/01/21/08/294968098.png" alt="Logo de l'application" class="circle-img">
+       
+        <p>Vous allez être redirigé vers le Play Store pour télécharger PCode.</p>
+        <p>Si la redirection ne fonctionne pas, cliquez ci-dessous :</p>
+        <a href="https://play.google.com/store/apps/details?id=p.code" class="btn">Télécharger PCode</a>
+    </div>
+    
+</body>
+</html>
